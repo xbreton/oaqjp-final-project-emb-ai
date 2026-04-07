@@ -1,6 +1,6 @@
-from emotion_detection import emotion_predictor
+from EmotionDetection import emotion_detector
 
-def test_emotion_predictor():
+def TestEmotionDetector():
     # Define the test cases: (Statement, Expected Dominant Emotion)
     test_cases = [
         ("I am glad this happened", "joy"),
@@ -14,7 +14,7 @@ def test_emotion_predictor():
 
     for statement, expected_emotion in test_cases:
         # Call the application function
-        result = emotion_predictor(statement)
+        result = emotion_detector(statement)
         
         # Extract the dominant emotion from the returned dictionary
         actual_emotion = result['dominant_emotion']
@@ -28,4 +28,4 @@ def test_emotion_predictor():
             print(f"      Expected: {expected_emotion} | Actual: {actual_emotion}\n")
 
 if __name__ == "__main__":
-    test_emotion_predictor()
+    TestEmotionDetector()
